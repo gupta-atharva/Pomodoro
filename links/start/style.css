@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+.pomohead{
+    position: relative;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 50px;
+}
+.present{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+}
+table, th, td{
+    margin-left: auto;  
+    margin-right: auto;  
+    border-collapse: collapse;  
+}
+#study{
+    margin: 35px;
+}
+#min{
+    margin: 35px;
+    height: 70px;
+    border-style: solid none solid solid;
+    border: 2px black;
+}
+#sec{
+    margin-left: 35px;
+    height: 70px;
+}
+.controls{
+    margin: 35px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#play, #pause, #replay{
+    margin: 35px;
+    width: 100px;
+    height: 45px
+}
+#del{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 13px;
+}
+p{
+    display: inline-block;
+}
+
+.tasks{
+    text-align: center;
+}
+
+.text-center{
+    font-size: 45px;
+}
+
+.form-group{
+    text-align: left;
+    padding-left: 650px;
+}
+
+label{
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+.form-control1{
+    /* margin-left: 150px; */
+    height: 35px;
+    width: 530px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.form-control2{
+    /* margin-left: 53px; */
+    height: 35px;
+    width: 530px;
+    margin-top: 10px;
+}
+
+::placeholder{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#items{
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+}
+
+#thead{
+    height: 60px;
+}
+
+button{
+    border: 2px solid black;
+    border-radius: 9px;
+    background-color: rgb(1, 5, 48);
+    color: rgb(71, 179, 179);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.s, #add, #clear{
+    margin: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+.s button{
+    width: 100%;
+    height: 50px;
+}
+.img{
+    background-image: url("imgs/main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img1{
+    background-image: url("imgs/img1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img2{
+    background-image: url("imgs/img2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+.img3{
+    background-image: url("imgs/img3.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+.img4{
+    background-image: url("imgs/img4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+.black{
+    color: black;
+}
+.white{
+    color: white;
+}

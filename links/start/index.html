@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POMODORO_START</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.jpg">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+</head>
+
+<body id="body" class="img">
+    <div>
+        <div id="pomo" class="pomohead">
+            <h2>POMODORO</h2>
+        </div>
+        <div class="present">
+            <table>
+                <tr>
+                <th id="std">
+                    STUDY
+                </th>
+                <th style="width: 35px"></th>
+                <th id="rel">
+                    RELAX
+                </th>
+            </tr>
+            <tr style="height: 15px;">
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th style="height: 50px;">
+                    <button onclick="incmin()" id="ctrl_btn1">
+                        <span><i class="material-icons"
+                            style="font-size:50px;color:rgb(71, 179, 179);width:200%; display: inline; margin: 65px;">expand_less</i><span
+                            style="font-size: 25px;"></span></span>
+                        </button>
+                    </th>
+                    <th></th>
+                    <th>
+                        <button onclick="incsec()" id="ctrl_btn2">
+                            <span><i class="material-icons"
+                                style="font-size:50px;color:rgb(71, 179, 179);width:200%; display: inline; margin: 65px;">expand_less</i><span
+                                style="font-size: 25px;"></span></span>
+                            </button>
+                </th>
+            </tr>
+            <tr>
+                <th id="min">
+                    
+                </th>
+                <th>:</th>
+                <th id="sec">
+                    
+                </th>
+            </tr>
+            <tr>
+                <th style="height: 50px;">
+                    <button onclick="decmin()" id="ctrl_btn3">
+                        <span><i class="material-icons"
+                            style="font-size:50px;color:rgb(71, 179, 179);width:200%; display: inline; margin: 65px;">expand_more</i><span
+                            style="font-size: 25px;"></span></span>
+                        </button>
+                    </th>
+                    <th></th>
+                    <th>
+                        <button onclick="decsec()" id="ctrl_btn4">
+                            <span><i class="material-icons"
+                                style="font-size:50px;color:rgb(71, 179, 179);width:200%; display: inline; margin: 65px;">expand_more</i><span
+                                style="font-size: 25px;"></span></span>
+                            </button>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class="controls">
+                <button id="play" onclick="start()"><span class="material-icons"
+                    style="font-size: 35px;">play_arrow</span></button>
+                    <!-- <a id="replay" href="./"><button>replay</button></a> -->
+                    <button id="pause" onclick="pause()"><span class="material-icons" style="font-size: 35px;">pause</span></button>
+                    <button id="replay" onclick="reset()"><span class="material-icons"
+                        style="font-size: 35px;">replay</span></button>
+                    </div>
+                    <div class="mood">
+                        <table class="moody">
+                            <tr>
+                                <th class="s">
+                                    <button onclick="play1()">
+                                        HAPPY
+                                    </button>
+                                </th>
+                                <th class="s">
+                                    <button onclick="play2()">
+                                        SAD
+                                    </button>
+                                </th>
+                                <th class="s">
+                                    <button onclick="play3()">
+                                        ANGRY
+                                    </button></th>
+                                    <th class="s">
+                                        <button onclick="play4()">
+                                            MOODY
+                                        </button>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="tasks">
+                            
+                            <div class="container my-4">
+                                <h2 class="text-center">TO-DO LIST</h2>
+                                <br><br>
+                                <div class="form-group">
+                                    <label for="title">Task :</label>
+                                    <br>
+                <textarea class="form-control1" id="title" rows="3" placeholder="Add task"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="description">Description :</label>
+                <br>
+                <textarea class="form-control2" id="description" rows="3" placeholder="Add description"></textarea>
+            </div>
+            <button id="add" class="btn btn-primary" onclick="getAndAdd()">Add to list</button>
+            <button id="clear" class="btn btn-primary" onclick="clearstorage()">Clear list</button>
+            <br><br>
+            <div id="items" class="my-4">
+                <h2>
+                    Your Tasks
+                </h2>
+                <br>
+                <table class="table" style="border: 3px solid black;">
+                    <thead id="thead">
+                        <tr>
+                            <th scope="col" style="border: 3px solid black; width: 150px;">S.No.</th>
+                            <th scope="col" style="border: 3px solid black; width: 300px;">Task Title</th>
+                            <th scope="col" style="border: 3px solid black; width: 400px;">Task Description</th>
+                            <th scope="col" style="border: 3px solid black; width: 300px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td scope="row" style="border: 1px solid black; height: 30px; padding: 0px; margin: 0px;">
+                            </td>
+                            <td style="border: 1px solid black; height: 30px; padding: 0px; margin: 0px;"></td>
+                            <td style="border: 1px solid black; height: 30px; padding: 0px; margin: 0px;"></td>
+                            <td style="border: 1px solid black; height: 30px; padding: 0px; margin: 0px;"><button
+                                    id="del" class="btn btn-sm btn-primary"></button></td>
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+</body>
+
+</html>
